@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Interactive 3D & Floor Plan Showcase | Appcodie</title>
+<meta name="description" content="Explore Appcodie's interactive floor-plan and furnished 3D house demos. Discuss custom LiDAR, RoomPlan, web and mobile app development.">
+<link rel="icon" type="image/svg+xml" href="appcodie-icon.svg">
+<link rel="stylesheet" href="blueprint.css"><link rel="stylesheet" href="house-showcase.css"><link rel="stylesheet" href="showcase.css">
+</head><body><a class="skip" href="#main">Skip to demos</a>
+<header class="site-header"><a href="https://www.appcodie.com/" aria-label="Appcodie website"><img src="appcodie-logo-light.svg" width="160" height="42" alt="Appcodie"></a><nav aria-label="Main"><a href="#expertise">Floor plan</a><a href="#houseShowcase">3D explorer</a><a class="button small" href="https://www.appcodie.com/contact?utm_source=github&amp;utm_medium=showcase&amp;utm_campaign=3d_demo">Discuss a project ↗</a></nav></header>
+<main id="main"><section class="intro"><p class="eyebrow">APPCODIE / SELECTED INTERACTIVE DEMOS</p><h1>Make space<br>for <em>interaction.</em></h1><div class="intro-bottom"><p>From floor plans to furnished 3D spaces. Explore two working examples of the experiences we build for web and mobile products.</p><a class="button" href="#expertise">Try the demos ↓</a></div><div class="tags"><span>INTERACTIVE 3D</span><span>ROOM MEASUREMENTS</span><span>WEB + MOBILE</span></div></section>
+<section class="scan-story" id="expertise"><div class="sticky-visual">
+  <div class="blueprint-card" id="blueprintCard">
+    <div class="blueprint-header"><div><p class="blueprint-eyebrow">SPATIAL BLUEPRINT</p><h3>From scan to structure.</h3></div><span class="blueprint-sample">SAMPLE LAYOUT</span></div>
+    <div class="blueprint-toolbar"><div class="blueprint-view-switch" role="group" aria-label="Blueprint view" hidden><button type="button" data-blueprint-view="3d" aria-pressed="true">3D view</button><button type="button" data-blueprint-view="top" aria-pressed="false">Top view</button></div><span>01 FLOOR / 03 ROOMS</span></div>
+    <div class="blueprint-drawing" id="blueprintDrawing" role="group" aria-label="Sample three-room architectural plan. Select a room to see its dimensions.">
+      <svg class="blueprint-fallback" viewBox="0 0 760 550" role="img" aria-label="Floor plan with a living room, kitchen and study"><path d="M80 60H662V476H80Z" fill="#163745" stroke="#9abac2" stroke-width="5"/><path d="M440 60V476M440 300H662" fill="none" stroke="#9abac2" stroke-width="4"/><g fill="#d4e3e7" font-family="sans-serif" font-size="22" text-anchor="middle"><text x="260" y="280">Living room</text><text x="550" y="190">Kitchen</text><text x="550" y="400">Study</text></g></svg>
+      <canvas id="blueprintCanvas" aria-hidden="true"></canvas>
+      <div class="blueprint-labels" id="blueprintLabels" hidden></div>
+      <div class="blueprint-dimensions" id="blueprintDimensions" aria-hidden="true" hidden><span>5.82 m</span><span>4.16 m</span></div>
+    </div>
+    <div class="blueprint-room-details" aria-live="polite" aria-atomic="true"><div><strong id="blueprintRoomName">Living room</strong><p id="blueprintRoomSize">3.60 × 4.16 m</p></div><div class="blueprint-area"><span id="blueprintRoomArea">14.98 m²</span><small>Sample floor area</small></div></div>
+    <div class="blueprint-footer"><span>Illustrative geometry · not a live scan</span><a href="#houseShowcase">Explore the whole home ↗</a></div>
+    <div class="blueprint-phase-track" aria-hidden="true"><span></span></div>
+  </div>
+  <div class="visual-caption"><span id="stepNumber">01 / 04</span><span id="stepTitle">Capture the space</span></div>
+</div><div class="story-steps"><article data-step="0"><p class="kicker">LiDAR & MEASUREMENT</p><h3>Capture the<br>physical world.</h3><p>Room scanning, floor plans, dimensions and spatial data captured through purpose-built iOS experiences.</p></article><article data-step="1"><p class="kicker">3D EXPERIENCES</p><h3>Turn depth into<br>understanding.</h3><p>Interactive 3D viewers, model workflows and AR-ready experiences that make complex spaces easy to explore.</p></article><article data-step="2"><p class="kicker">MOBILE PRODUCTS</p><h3>Put the workflow<br>in every hand.</h3><p>Premium iOS, Android and Flutter apps built for speed, clean interaction and dependable release.</p></article><article data-step="3"><p class="kicker">CONNECTED SOFTWARE</p><h3>Make every part<br>work together.</h3><p>Web applications, dashboards, APIs and cloud systems that connect field data to daily business decisions.</p></article></div></section><div class="house-section"><section class="house-showcase" id="houseShowcase" aria-labelledby="houseShowcaseTitle">
+    <div class="house-showcase-visual">
+      <div class="house-preview" id="housePreview">
+        <img class="house-poster" src="house-cutaway.webp" width="1448" height="1086" alt="Furnished home cutaway with a living and dining space, kitchen, bathroom and bedroom" loading="lazy">
+        <div class="house-preview-tag">EXPLORE THE SPACE</div>
+        <div class="house-preview-targets" id="housePreviewTargets" hidden></div>
+        <span class="house-preview-hint" id="housePreviewHint" hidden>Select a room to see its dimensions <span aria-hidden="true">↗</span></span>
+      </div>
+      <p class="house-sample-note">Illustrative home · sample measurements</p>
+    </div>
+    <div class="house-showcase-copy">
+      <p class="spatial-overline">EVERY ROOM, IN PERSPECTIVE</p>
+      <h3 id="houseShowcaseTitle">A space you can<br>look into.</h3>
+      <p>Open the home, select a room and explore its dimensions. Bring house scanning, floor plans and inspection details together in a product built for your team.</p>
+      <div class="house-room-menu" id="houseRoomMenu" aria-label="Explore rooms" hidden></div>
+      <div class="house-showcase-actions"><button class="button" id="houseStart" type="button" aria-haspopup="dialog" aria-controls="houseDialog" hidden>Open 3D explorer <span aria-hidden="true">↗</span></button><a href="#expertise">Explore floor plans ↓</a></div>
+      <noscript><p>Enable JavaScript to select rooms and explore the sample home in 3D.</p></noscript>
+    </div>
+  </section></div>
+<section class="services" id="services"><p class="eyebrow">YOUR NEXT PRODUCT</p><h2>Bring your idea.<br>We’ll build the experience.</h2><div class="service-grid"><article><span>01 / SPATIAL</span><h3>LiDAR & floor-plan apps</h3><p>Custom iOS capture workflows, RoomPlan integration, editable floor plans and room measurement interfaces.</p></article><article><span>02 / INTERACTIVE</span><h3>3D websites & viewers</h3><p>Architectural explorers, product presentations and browser-based 3D experiences shaped around your audience.</p></article><article><span>03 / CONNECTED</span><h3>Inspection & reporting tools</h3><p>Field apps, photo documentation, dashboards and custom appraisal reporting workflows, including UAD 3.6 requirements review.</p></article></div>
+<div class="contact-panel"><div><p class="eyebrow">BUILD SOMETHING USEFUL</p><h2>Have a project in mind?</h2><p>Tell us your users, target platforms and the workflow you want to improve. We’ll discuss scope, approach and next steps.</p></div><div class="contact-actions"><a class="button" href="https://www.appcodie.com/contact?utm_source=github&amp;utm_medium=showcase&amp;utm_campaign=3d_demo">Book a free project discussion ↗</a><a href="https://codezlet.com/">Explore our complete showcase ↗</a><a href="mailto:admin@appcodie.com">admin@appcodie.com</a></div></div></section>
+</main><footer class="site-footer"><span>© 2026 Appcodie · Mohali, India</span><a href="https://www.appcodie.com/">Appcodie</a><a href="https://codezlet.com/">Codezlet</a><span>Illustrative demos · sample data</span></footer>
+<dialog class="house-dialog" id="houseDialog" aria-labelledby="houseDialogTitle" aria-describedby="houseDemoNote">
+  <header class="house-dialog-header">
+    <div><p>APPCODIE / SPATIAL EXPLORER</p><h2 id="houseDialogTitle">Explore the home.</h2></div>
+    <button type="button" class="house-icon-button house-close" id="houseClose" aria-label="Close house explorer" autofocus><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg></button>
+  </header>
+  <div class="house-explorer-body">
+    <div class="house-viewport-wrap">
+      <div class="house-view-toolbar">
+        <div class="house-segment" role="group" aria-label="House view"><button type="button" data-house-view="3d" aria-pressed="true" disabled>3D model</button><button type="button" data-house-view="top" aria-pressed="false" disabled>Top view</button></div>
+        <span class="house-model-label" id="houseModelLabel">SAMPLE HOME</span>
+      </div>
+      <div class="house-viewport" id="houseViewport" tabindex="0" role="group" aria-label="Interactive house. Click a room to select it. Drag to orbit. Arrow keys rotate; plus and minus zoom." aria-describedby="houseViewHelp">
+        <img class="house-model-fallback" src="house-cutaway.webp" alt="Illustrative furnished home" width="1448" height="1086">
+        <canvas id="houseCanvas" aria-hidden="true"></canvas>
+        <div class="house-room-labels" id="houseRoomLabels"></div>
+        <div class="house-dimension-labels" id="houseDimensionLabels" aria-hidden="true"><span id="houseWidthLabel"></span><span id="houseDepthLabel"></span></div>
+        <div class="house-loading" id="houseLoading" role="status">Preparing your 3D view…</div>
+      </div>
+      <div class="house-view-footer">
+        <p id="houseViewHelp">Drag to orbit · click a room</p>
+        <div class="house-zoom-controls" role="group" aria-label="Model controls">
+          <button type="button" class="house-icon-button" id="houseRotateLeft" aria-label="Rotate house left" title="Rotate left" disabled>↶</button>
+          <button type="button" class="house-icon-button" id="houseRotateRight" aria-label="Rotate house right" title="Rotate right" disabled>↷</button>
+          <span class="house-control-divider"></span>
+          <button type="button" class="house-icon-button" id="houseZoomOut" aria-label="Zoom out" title="Zoom out" disabled>−</button>
+          <button type="button" class="house-icon-button" id="houseZoomIn" aria-label="Zoom in" title="Zoom in" disabled>+</button>
+          <button type="button" class="house-reset" id="houseReset" disabled>Reset</button>
+        </div>
+      </div>
+      <p class="house-render-status" id="houseRenderStatus" role="status" hidden></p>
+    </div>
+    <aside class="house-inspector" aria-label="Selected room details">
+      <div class="house-inspector-heading"><p class="house-eyebrow">SELECTED ROOM</p><div class="house-segment house-unit-switch" role="group" aria-label="Measurement units"><button type="button" data-house-unit="metric" aria-pressed="true">m</button><button type="button" data-house-unit="imperial" aria-pressed="false">ft</button></div></div>
+      <h3 id="houseSelectedName">Living &amp; dining</h3>
+      <p class="house-room-description" id="houseSelectedDescription"></p>
+      <div class="house-area-display"><strong id="houseSelectedArea"></strong><span>ROOM FLOOR AREA</span></div>
+      <dl class="house-measurements"><div><dt>Width</dt><dd id="houseSelectedWidth"></dd></div><div><dt>Length</dt><dd id="houseSelectedDepth"></dd></div><div><dt>Ceiling height</dt><dd id="houseSelectedHeight"></dd></div><div><dt>Floor finish</dt><dd id="houseSelectedFinish"></dd></div></dl>
+      <div class="house-room-list-heading"><h4>Explore another room</h4><span>04</span></div>
+      <div class="house-room-list" id="houseRoomList" role="group" aria-label="Select a room"></div>
+      <div class="house-total"><span>Total room area</span><strong id="houseTotalArea"></strong></div>
+      <div class="house-project-cta"><p>Make this part of your product.</p><a href="https://www.appcodie.com/contact?utm_source=github&amp;utm_medium=showcase&amp;utm_campaign=3d_demo">Discuss your scanning app <span aria-hidden="true">↗</span></a></div>
+    </aside>
+  </div>
+  <footer class="house-dialog-footer"><p id="houseDemoNote">Sample home and dimensions for demonstration. Total room area excludes walls; it is not an appraisal area calculation.</p><span id="houseSelectionStatus" class="house-sr-only" role="status" aria-live="polite"></span></footer>
+</dialog><script type="module" src="blueprint.mjs"></script><script type="module" src="house-showcase.mjs"></script></body></html>

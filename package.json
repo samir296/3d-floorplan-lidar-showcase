@@ -1,0 +1,1 @@
+{"name":"appcodie-3d-showcase","version":"1.0.0","private":true,"type":"module","description":"Selected interactive floor-plan and furnished 3D house demos by Appcodie.","scripts":{"start":"node scripts/serve.mjs","test":"node scripts/check.mjs"},"engines":{"node":">=18"},"license":"SEE LICENSE IN LICENSE.txt"}

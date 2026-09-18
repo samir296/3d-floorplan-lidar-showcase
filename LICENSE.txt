@@ -1,0 +1,14 @@
+Appcodie Showcase — Evaluation License
+Copyright (c) 2026 Appcodie. All rights reserved.
+
+You may download, clone and fork this showcase on GitHub and run it locally
+for learning and evaluation. Keep this notice and attribution intact.
+Commercial reuse, redistribution outside GitHub, and use of Appcodie branding
+to represent your own services require written permission from Appcodie.
+Contact: admin@appcodie.com
+
+This permission covers only the original demo code in this repository.
+Appcodie names and logos remain the property of their respective owner.
+Third-party code retains its separate license; see THIRD_PARTY_NOTICES.md.
+The demo is supplied as-is without warranty or support commitment.
+This is a source-available showcase, not an open-source licensed product.

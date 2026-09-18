@@ -100,6 +100,18 @@ substitute for checking actual rendering on your target mobile devices.
 See [GITHUB-SETUP.md](GITHUB-SETUP.md) for a suggested repository name, description,
 topics, push commands and optional GitHub Pages setup.
 
+### Deploy on Vercel
+
+Import the repository with Root Directory set to the repository root (the folder
+containing `package.json`, `index.html` and `vercel.json`). The included
+`vercel.json` selects the **Other** framework preset, skips the build command and
+serves the static files directly from `.`. No Next.js dependency is required.
+
+If an existing project reports "No Next.js version detected", push this
+configuration and deploy the updated commit. In Vercel's Build and Deployment
+settings, use **Other** as the Framework Preset, an empty Build Command and `.`
+as the Output Directory.
+
 ## License and attribution
 
 This is a **source-available evaluation showcase**. You may clone, fork and run it
